@@ -8,7 +8,7 @@ function createPrismaClient() {
     url: process.env.TURSO_DATABASE_URL!,
     authToken: process.env.TURSO_AUTH_TOKEN,
   });
-  return new PrismaClient({ adapter: adapter as never, log: ["error"] });
+  return new PrismaClient({ adapter, log: ["error"] });
 }
 
 export const prisma = globalForPrisma.prisma ?? createPrismaClient();
