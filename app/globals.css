@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #e8a020;
+}
+
+body {
+  @apply bg-zinc-950 text-zinc-100;
+}
+
+.stat-bar {
+  @apply h-1.5 rounded-full bg-zinc-700 overflow-hidden;
+}
+
+.stat-bar-fill {
+  @apply h-full rounded-full;
+  transition: width 0.3s ease;
+}
+
+.pi-badge {
+  @apply inline-flex items-center justify-center font-bold text-xs rounded px-1.5 py-0.5 min-w-[2.2rem];
+}
